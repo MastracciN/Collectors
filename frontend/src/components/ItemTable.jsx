@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const Home = () => {
+const ItemTable = () => {
 
     const [items, setItems] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetch('api/items')
@@ -28,7 +30,8 @@ const Home = () => {
                     {items.map((item) => (
                     <tr
                         key={item.id}
-                        className="border-b hover:bg-gray-50 transition"
+                        onClick={() => navigate(`/items/${item.id}`)}
+                        className="border-b hover:bg-gray-50 transition cursor-pointer"
                     >
                         <td className="p-3">{item.id}</td>
                         <td className="p-3">{item.title}</td>
@@ -43,4 +46,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default ItemTable;
