@@ -6,12 +6,10 @@ import ItemDetails from './components/ItemDetails';
 function App() {
 
   return (
-    <Router>
-      <Routes>
-        <Route path='/' element={<ItemTable />} />
-        <Route path='/items/:id' element={<ItemDetails />} />
-      </Routes>
-    </Router>
+    <Routes>
+      <Route path='/' element={<ItemTable />} />
+      <Route path='/items/:id' element={<ItemDetails />} />
+    </Routes>
   );
 }
 

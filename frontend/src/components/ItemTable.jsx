@@ -20,10 +20,10 @@ const ItemTable = () => {
                 <table className="w-full border-collapse">
                 <thead>
                     <tr className="bg-gray-100 text-left">
-                    <th className="p-3">ID</th>
-                    <th className="p-3">Name</th>
-                    <th className="p-3"></th>
-                    <th className="p-3"></th>
+                        <th className="p-3">ID</th>
+                        <th className="p-3">Name</th>
+                        <th className="p-3"></th>
+                        <th className="p-3"></th>
                     </tr>
                 </thead>
                 <tbody>

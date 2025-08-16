@@ -16,11 +16,9 @@ export default function ItemDetails() {
 
   return (
     <div className="max-w-md mx-auto mt-8 p-4 bg-white rounded-2xl shadow">
-      <h2 className="text-xl font-semibold mb-4">User Details</h2>
+      <h2 className="text-xl font-semibold mb-4">Item Details</h2>
       <p><span className="font-semibold">ID:</span> {item.id}</p>
-      <p><span className="font-semibold">Name:</span> {item.name}</p>
-      <p><span className="font-semibold">Email:</span> {item.email}</p>
-      <p><span className="font-semibold">Role:</span> {item.role}</p>
+      <p><span className="font-semibold">Name:</span> {item.title}</p>
       
       <Link
         to="/"
