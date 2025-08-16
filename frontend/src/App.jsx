@@ -2,18 +2,13 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Home from './components/Home/'
 
 function App() {
-  fetch('api/users')
-  .then(res => res.json())
-  .then(data => console.log(data));
-
 
   return (
-    <div>
-      hello world
-    </div>
+    <Home />
   )
 }
 
-export default App
+export default App;
