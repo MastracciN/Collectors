@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
+import { deleteItem } from "../api/items";
 
 export default function ItemForm() {
   const { id } = useParams(); // might be "new" or a number
@@ -67,6 +68,17 @@ export default function ItemForm() {
     }
   };
 
+  const handleDelete = async () => {
+    if (!window.confirm("Are you sure you want to delete this item?")) return;
+
+    try {
+      await deleteItem(id);
+      navigate("/");
+    } catch (err) {
+      console.error("Error deleting item:", err);
+    }
+  };
+
   if (loading) return <div className="p-4">Loading...</div>;
   if (!isNew && !item) return <div className="p-4">Item not found.</div>;
 
@@ -98,6 +110,12 @@ export default function ItemForm() {
             >
               Edit
             </button>
+            <button
+              onClick={handleDelete}
+              className="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600"
+            >
+              Delete Item
+          </button>
           </div>
         </>
       ) : (
