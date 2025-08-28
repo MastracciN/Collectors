@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 const ItemTable = () => {
     const [items, setItems] = useState([]);
@@ -28,6 +28,12 @@ const ItemTable = () => {
                 onChange={(e) => setSearch(e.target.value)}
                 className="w-full p-2 mb-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
+            <Link
+                to="/items/new"
+                className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600"
+                >
+                Create New Item
+            </Link>
 
             <div className="overflow-x-auto">
                 <table className="w-full border-collapse">
