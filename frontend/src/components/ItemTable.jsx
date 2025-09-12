@@ -34,6 +34,12 @@ const ItemTable = () => {
                 >
                 Create New Item
             </Link>
+            <Link
+                to="/upcscanner"
+                className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600"
+                >
+                Scan New Item
+            </Link>
 
             <div className="overflow-x-auto">
                 <table className="w-full border-collapse">
