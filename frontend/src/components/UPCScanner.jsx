@@ -1,13 +1,13 @@
 import { useState } from "react";
-import QrBarcodeScanner from "react-qr-barcode-scanner";
+import BarcodeScanner from "react-qr-barcode-scanner";
 
 const UPCScanner = () => {
     const [scanned, setScanned] = useState("No result");
 
     return (
         <div style={{ width: "100%", maxWidth: "500px", margin: "auto" }}>
-            <h2>Scan a QR or Barcode</h2>
-            <QrBarcodeScanner
+            <h2>Scan a Barcode</h2>
+            <BarcodeScanner
                 onUpdate={(err, result) => {
                     if (result) {
                         const code = result.text;
