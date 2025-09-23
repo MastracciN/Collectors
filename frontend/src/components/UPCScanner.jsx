@@ -1,6 +1,7 @@
 import { useState } from "react";
 import BarcodeScanner from "react-qr-barcode-scanner";
 
+// Turn into a modal for use on ItemDetails page
 const UPCScanner = () => {
     const [scanned, setScanned] = useState("No result");
 
