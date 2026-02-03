@@ -13,7 +13,6 @@ const UPCScanner = () => {
                 height={500}
                 onUpdate={(err, result) => {
                     if (result) setData(result.text);
-                    else setData("Not found");
                 }}
             />
             <p>{data}</p>
