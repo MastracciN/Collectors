@@ -1,33 +1,22 @@
 import { useState } from "react";
-import { BarcodeScanner } from "react-qr-barcode-scanner";
-import 'react-barcode-scanner/polyfill';
+import BarcodeScanner from "react-qr-barcode-scanner";
 
 // Turn into a modal for use on ItemDetails page
 const UPCScanner = () => {
-    const [scanned, setScanned] = useState("No result");
+    const [data, setData] = useState("No result");
 
     return (
         <div style={{ width: "100%", maxWidth: "500px", margin: "auto" }}>
-            <BarcodeScanner />
-            {/* <h2>Scan a Barcode</h2>
+            <h2>Scan a Barcode</h2>
             <BarcodeScanner
+                width={500}
+                height={500}
                 onUpdate={(err, result) => {
-                    if (result) {
-                        const code = result.text;
-                        const format = result.format; // e.g. "UPC_A"
-
-                        if (format.includes("UPC")) {
-                            setScanned(`UPC code: ${code}`);
-                        } else {
-                            setScanned(`${format}: ${code}`);
-                        }
-                    }
+                    if (result) setData(result.text);
+                    else setData("Not found");
                 }}
-                    constraints={{ facingMode: "environment" }} // use back camera
-                    width={500}
-                    height={500}
             />
-            <p>{scanned}</p> */}
+            <p>{data}</p>
         </div>
     );
 };
