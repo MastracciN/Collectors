@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BarcodeScanner } from "react-barcode-scanner";
+import { BarcodeScanner } from "react-qr-barcode-scanner";
 import 'react-barcode-scanner/polyfill';
 
 // Turn into a modal for use on ItemDetails page

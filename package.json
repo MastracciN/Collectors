@@ -24,6 +24,6 @@
     "concurrently": "^9.2.0"
   },
   "dependencies": {
-    "react-barcode-scanner": "^4.0.1"
+    "react-qr-barcode-scanner": "^2.1.23"
   }
 }
