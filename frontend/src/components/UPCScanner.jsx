@@ -1,5 +1,6 @@
 import { useState } from "react";
-import BarcodeScanner from "react-qr-barcode-scanner";
+import { BarcodeScanner } from "react-barcode-scanner";
+import 'react-barcode-scanner/polyfill';
 
 // Turn into a modal for use on ItemDetails page
 const UPCScanner = () => {
@@ -7,7 +8,8 @@ const UPCScanner = () => {
 
     return (
         <div style={{ width: "100%", maxWidth: "500px", margin: "auto" }}>
-            <h2>Scan a Barcode</h2>
+            <BarcodeScanner />
+            {/* <h2>Scan a Barcode</h2>
             <BarcodeScanner
                 onUpdate={(err, result) => {
                     if (result) {
@@ -25,7 +27,7 @@ const UPCScanner = () => {
                     width={500}
                     height={500}
             />
-            <p>{scanned}</p>
+            <p>{scanned}</p> */}
         </div>
     );
 };
