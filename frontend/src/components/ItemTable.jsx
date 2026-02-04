@@ -29,7 +29,7 @@ const ItemTable = () => {
                 className="w-full p-2 mb-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <Link
-                to="/items/new"
+                to="/items/createItem"
                 className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600"
                 >
                 Create New Item

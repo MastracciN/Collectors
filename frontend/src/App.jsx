@@ -1,6 +1,7 @@
 import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ItemTable from './components/ItemTable';
+import CreateItem from './components/CreateItem';
 import ItemDetails from './components/ItemDetails';
 import UPCScanner from './components/UPCScanner';
 
@@ -9,6 +10,7 @@ function App() {
   return (
     <Routes>
       <Route path='/' element={<ItemTable />} />
+      <Route path='/items/createItem' element={<CreateItem />} />
       <Route path='/items/:id' element={<ItemDetails />} />
       <Route path='/upcscanner' element={<UPCScanner />} />
     </Routes>
