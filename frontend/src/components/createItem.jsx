@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
-import { deleteItem } from "../api/items";
+import { createItem } from "../api/items";
 
 export default function CreateItem() {
 
@@ -32,14 +32,8 @@ export default function CreateItem() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("submitting:", formData);
     try {
-      // Create new item
-      await fetch(`/api/items`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+      await createItem(formData);
       navigate("/"); // go back to items list
     } catch (err) {
       console.error("Error saving item:", err);
