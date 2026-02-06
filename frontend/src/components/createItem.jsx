@@ -4,6 +4,8 @@ import { deleteItem } from "../api/items";
 
 export default function CreateItem() {
 
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     title: "",
     upc: "",
@@ -17,6 +19,7 @@ export default function CreateItem() {
     currency: "",
     lowest_recorded_price: "",
     highest_recorded_price: "",
+    images:"",
   });
 
   const handleChange = (e) => {
@@ -145,6 +148,14 @@ export default function CreateItem() {
           type="number"
           name="highest_recorded_price"
           value={formData.highest_recorded_price}
+          onChange={handleChange}  
+          className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"/>
+        <label className="block text-sm font-semibold mb-1 capitalize">
+          Images
+        </label>
+        <input
+          name="images"
+          value={formData.images}
           onChange={handleChange}  
           className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"/>
 
