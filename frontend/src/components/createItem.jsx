@@ -17,9 +17,9 @@ export default function CreateItem() {
     size: "",
     category: "",
     currency: "",
-    lowest_recorded_price: "",
-    highest_recorded_price: "",
-    images:"",
+    lowest_recorded_price: 0,
+    highest_recorded_price: 0,
+    images:[],
   });
 
   const handleChange = (e) => {
@@ -64,8 +64,8 @@ export default function CreateItem() {
           UPC
         </label>
         <input
-          name="UPC"
-          value={formData.UPC}
+          name="upc"
+          value={formData.upc}
           onChange={handleChange}  
           className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"/>
         <label className="block text-sm font-semibold mb-1 capitalize">
